@@ -6,8 +6,10 @@ part 'get_url_short_response_model.g.dart';
 @JsonSerializable()
 class GetUrlShortResponseModel{
   String shortUrl;
+  int statusCode;
   GetUrlShortResponseModel({
-    required this.shortUrl
+    required this.shortUrl,
+    required this.statusCode
   });
 
   factory GetUrlShortResponseModel.fromJson(Map<String, dynamic> json) => _$GetUrlShortResponseModelFromJson(json);
@@ -15,6 +17,6 @@ class GetUrlShortResponseModel{
   Map<String,dynamic> toJson() => _$GetUrlShortResponseModelToJson(this);
 
   GetUrlShortEntity toEntity(){
-    return GetUrlShortEntity(shortUrl: shortUrl);
+    return GetUrlShortEntity(shortUrl: shortUrl, statusCode: statusCode);
   }
 }

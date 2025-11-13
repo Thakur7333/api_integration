@@ -10,10 +10,12 @@ GetUrlShortResponseModel _$GetUrlShortResponseModelFromJson(
         Map<String, dynamic> json) =>
     GetUrlShortResponseModel(
       shortUrl: json['shortUrl'] as String,
+      statusCode: (json['statusCode'] as num).toInt(),
     );
 
 Map<String, dynamic> _$GetUrlShortResponseModelToJson(
         GetUrlShortResponseModel instance) =>
     <String, dynamic>{
       'shortUrl': instance.shortUrl,
+      'statusCode': instance.statusCode,
     };

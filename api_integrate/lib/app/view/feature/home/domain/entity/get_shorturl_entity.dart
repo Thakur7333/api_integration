@@ -1,4 +1,5 @@
 class GetUrlShortEntity{
    String shortUrl;
-   GetUrlShortEntity({required this.shortUrl});
+   int statusCode;
+   GetUrlShortEntity({required this.shortUrl, required this.statusCode});
 }

@@ -19,7 +19,9 @@ class ShortUrlDataSourceImpl extends HomeRepository{
         "url":""
       });
       final response = await Client.get(url);
-      return response.body;
+      if(response.statusCode == 200){
+        return response;
+      }
     }catch(e){
      print("enter datasource catch ${e.toString()}");
     }
